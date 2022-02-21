@@ -2,17 +2,44 @@
 {% extends "template.njk" %}
 {% block main %}
 
-  <!-- scroll-progress & goto-top -->
-  {% include "_scrollProgress.njk"%}
-  <!-- start of navigation -->
-  {% include "_header.njk"%}
-  <!-- end of navigation -->
+<!-- scroll-progress & goto-top -->
+{% include "_scrollProgress.njk"%}
+<!-- start of navigation -->
+{% include "_header.njk"%}
+<!-- end of navigation -->
 
-  <div class="box1"></div>
+{% set title="Plug & play template to get you up and running fast." %}
+{% set itemContent1="Explain your value prop as easily as possible."%}
+{% set itemContent2="Communicate your most important features."%}
+{% set itemContent3="Close with killer testimonials."%}
+{% set featureMobile="/image/png/Mobile-Mockup.png"%}
+{% set barChartIcon="/image/svg/Feature-Icon.svg"%}
+{% set toggleIcon="/image/svg/quote-icon.svg"%}
+{% set testimonialIcon="/image/svg/toggle-icon.svg"%}
 
-  <!-- start of footer -->
 
-  {% include "_footer.njk" %}
-  
-  <!-- end of footer -->
-  {% endblock %}
+<div class="feature-section">
+  <div class="feature-image_section">
+    <img src="{{featureMobile}}" alt="">
+  </div>
+  <div class="feature-content_section">
+    <div class="feature-title">
+      <h2>{{title}}</h2>
+    </div>
+    <div class="feature-list">
+      <ul class="feature-list_item">
+        <li class="feature-item"><img src="{{barChartIcon}}" alt="">{{itemContent1}}</li>
+        <li class="feature-item"><img src="{{toggleIcon}}" alt="">{{itemContent2}}</li>
+        <li class="feature-item"><img src="{{testimonialIcon}}" alt="">{{itemContent3}}</li>
+      </ul>
+    </div>
+    <button class="btn btn-black">Primary</button>
+  </div>
+</div>
+
+<!-- start of footer -->
+
+{% include "_footer.njk" %}
+
+<!-- end of footer -->
+{% endblock %}
